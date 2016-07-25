@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Import from IITC</name>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Bernard Hall</name>
+            <Point>
+                <coordinates>-117.706413,34.10442,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 41%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Living Room Mural</name>
+            <Point>
+                <coordinates>-117.704505,34.103338,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>McConnell Mural</name>
+            <Point>
+                <coordinates>-117.706035,34.103,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 25%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Wild Spacey Mural</name>
+            <Point>
+                <coordinates>-117.70627,34.102487,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Escalator Mural</name>
+            <Point>
+                <coordinates>-117.705406,34.103022,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 2</li><li>Health: 60%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Tiered Fountain</name>
+            <Point>
+                <coordinates>-117.707193,34.106238,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Dragon Mural</name>
+            <Point>
+                <coordinates>-117.704972,34.103682,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>&amp;quot;Interhuemen&amp;quot; Mural</name>
+            <Point>
+                <coordinates>-117.704785,34.104035,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Aztec Bench</name>
+            <Point>
+                <coordinates>-117.705691,34.103696,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Sombrero Duck</name>
+            <Point>
+                <coordinates>-117.707305,34.10596,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 2</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Orange World Wall Mural</name>
+            <Point>
+                <coordinates>-117.705481,34.102543,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Emily Carr Quote</name>
+            <Point>
+                <coordinates>-117.708634,34.103001,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 54%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Spoon Banana Mural</name>
+            <Point>
+                <coordinates>-117.705321,34.103975,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Regionally Appropriate Landscape Demonstration Garden</name>
+            <Point>
+                <coordinates>-117.707242,34.104994,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Cacti and Mural</name>
+            <Point>
+                <coordinates>-117.704503,34.104306,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Si Se Puede Mural</name>
+            <Point>
+                <coordinates>-117.705347,34.103323,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Beverly Sills Quote</name>
+            <Point>
+                <coordinates>-117.708377,34.103013,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Seeley Mudd Quadrangle Memorial</name>
+            <Point>
+                <coordinates>-117.708341,34.106114,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Bauer Mosaic</name>
+            <Point>
+                <coordinates>-117.706512,34.102487,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Fletcher Mural</name>
+            <Point>
+                <coordinates>-117.706434,34.103829,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Mosaic Box</name>
+            <Point>
+                <coordinates>-117.706712,34.103995,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Brant Tower at Pitzer College</name>
+            <Point>
+                <coordinates>-117.705544,34.104705,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Barcode Man 4261039</name>
+            <Point>
+                <coordinates>-117.705261,34.104441,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Mead Hall Mural</name>
+            <Point>
+                <coordinates>-117.705182,34.104182,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Pitzer Fountain</name>
+            <Point>
+                <coordinates>-117.705571,34.103917,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Sex Industry Worker</name>
+            <Point>
+                <coordinates>-117.704833,34.105171,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 3</li><li>Resonators: 7</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Pitzer Gates</name>
+            <Point>
+                <coordinates>-117.706973,34.103808,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Mumia Mural</name>
+            <Point>
+                <coordinates>-117.705229,34.103491,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Truth Mural</name>
+            <Point>
+                <coordinates>-117.705102,34.103276,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Provida Futuri</name>
+            <Point>
+                <coordinates>-117.704888,34.104321,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Galileo Plaza</name>
+            <Point>
+                <coordinates>-117.707209,34.10573,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Blaisdell Fountain</name>
+            <Point>
+                <coordinates>-117.714298,34.102621,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 5</li><li>Health: 15%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>R. Michael Shanahan Center for Teaching and Learning</name>
+            <Point>
+                <coordinates>-117.710882,34.106423,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 7</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Ruth Chandler Williamson Gallery</name>
+            <Point>
+                <coordinates>-117.71179,34.104462,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Motion Shield Sculpture</name>
+            <Point>
+                <coordinates>-117.709575,34.106138,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Grace Scripps Clark</name>
+            <Point>
+                <coordinates>-117.711054,34.104577,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Pegasus Mural</name>
+            <Point>
+                <coordinates>-117.710359,34.102707,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Fowler Garden at Scripps College</name>
+            <Point>
+                <coordinates>-117.709449,34.103742,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Square Block Mosaic</name>
+            <Point>
+                <coordinates>-117.710426,34.105908,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Man And Nature Albert Stewart</name>
+            <Point>
+                <coordinates>-117.71041,34.103536,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Harvey Mudd College Entrance</name>
+            <Point>
+                <coordinates>-117.713071,34.106419,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Astronomical Sun Dial</name>
+            <Point>
+                <coordinates>-117.70906,34.106063,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>The Honnold Library</name>
+            <Point>
+                <coordinates>-117.712647,34.102488,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Walking Fountain at Scripps College</name>
+            <Point>
+                <coordinates>-117.71068,34.103083,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 60%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Ella Strong Denison Library</name>
+            <Point>
+                <coordinates>-117.711475,34.104266,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Geo Dial</name>
+            <Point>
+                <coordinates>-117.710882,34.103345,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 2</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>CGU Clock Tower</name>
+            <Point>
+                <coordinates>-117.713775,34.103084,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Braun Mall Honorarium</name>
+            <Point>
+                <coordinates>-117.710517,34.10609,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Denison Library</name>
+            <Point>
+                <coordinates>-117.710874,34.104063,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 40%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Swallows Fountain</name>
+            <Point>
+                <coordinates>-117.709241,34.105214,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 40%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Pond Fountain</name>
+            <Point>
+                <coordinates>-117.711156,34.103655,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Kresge Chapel</name>
+            <Point>
+                <coordinates>-117.715984,34.108163,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Eternal Primitive</name>
+            <Point>
+                <coordinates>-117.709701,34.10387,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 5</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Claremont Colleges Sign</name>
+            <Point>
+                <coordinates>-117.713009,34.106816,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Rancho Santa Ana Botanic Garden </name>
+            <Point>
+                <coordinates>-117.714804,34.107374,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 25%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Harvey Mudd Crest</name>
+            <Point>
+                <coordinates>-117.711046,34.105648,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Claremont School of Theology</name>
+            <Point>
+                <coordinates>-117.715978,34.107456,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Dr. Spac Dedication</name>
+            <Point>
+                <coordinates>-117.710723,34.105979,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 2</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Luminous Sculpture</name>
+            <Point>
+                <coordinates>-117.713776,34.103735,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Scripps Fountain</name>
+            <Point>
+                <coordinates>-117.70913,34.104528,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 7</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Millard Sheets Bust</name>
+            <Point>
+                <coordinates>-117.71213,34.104755,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Scripps College Entrance</name>
+            <Point>
+                <coordinates>-117.711338,34.102711,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Clark Humanities Museum</name>
+            <Point>
+                <coordinates>-117.709476,34.103311,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 7</li><li>Resonators: 8</li><li>Health: 85%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Alison Saar 78 Swing Low Harriet Tubman Memorial 2007</name>
+            <Point>
+                <coordinates>-117.712004,34.104965,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Norman F Sprague Memorial Library</name>
+            <Point>
+                <coordinates>-117.713473,34.105458,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Seal Court Fountain</name>
+            <Point>
+                <coordinates>-117.710235,34.10288,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Sea Life Mosaic </name>
+            <Point>
+                <coordinates>-117.709853,34.102679,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Hixon Court Fountain</name>
+            <Point>
+                <coordinates>-117.711593,34.10612,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Shakespeare Sculptures</name>
+            <Point>
+                <coordinates>-117.711184,34.103021,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Ruby and Oliver Field Recognition Plaque</name>
+            <Point>
+                <coordinates>-117.712964,34.10605,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 40%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Scripps College C/O 99</name>
+            <Point>
+                <coordinates>-117.710052,34.105101,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 3</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Harvey S. Mudd Quadrangle</name>
+            <Point>
+                <coordinates>-117.712662,34.102964,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Concrete Sculpture</name>
+            <Point>
+                <coordinates>-117.70899,34.104946,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 2</li><li>Resonators: 4</li><li>Health: 49%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Channel Fountain</name>
+            <Point>
+                <coordinates>-117.712803,34.106477,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Jay&amp;apos;s Place Mural</name>
+            <Point>
+                <coordinates>-117.710084,34.106074,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 2</li><li>Resonators: 8</li><li>Health: 92%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>The Garrison Theater of the Claremont Colleges</name>
+            <Point>
+                <coordinates>-117.712609,34.103548,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>DesCombes Family Gate</name>
+            <Point>
+                <coordinates>-117.7146,34.102697,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Claremont Billboard</name>
+            <Point>
+                <coordinates>-117.708622,34.101337,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 3</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Claremont McKenna College</name>
+            <Point>
+                <coordinates>-117.703078,34.102404,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 43%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Pacesetter Patio Honorarium</name>
+            <Point>
+                <coordinates>-117.708068,34.101949,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 9%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Staff Memorial Fountain</name>
+            <Point>
+                <coordinates>-117.706935,34.102092,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Edward S. Gould Memorial</name>
+            <Point>
+                <coordinates>-117.707785,34.10017,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Collins Dining Hall</name>
+            <Point>
+                <coordinates>-117.708461,34.101483,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Stark Hall (Winter Is Coming)</name>
+            <Point>
+                <coordinates>-117.70771,34.099998,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 25%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Class Dedication</name>
+            <Point>
+                <coordinates>-117.707737,34.10193,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Seaver Laboratory - Chemistry</name>
+            <Point>
+                <coordinates>-117.715263,34.100386,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Queer Resource Center &amp; Walton Commons</name>
+            <Point>
+                <coordinates>-117.71009,34.099819,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 64%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Smith Memorial Tower</name>
+            <Point>
+                <coordinates>-117.71143,34.100076,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 25%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Kravis Dedication Plaque</name>
+            <Point>
+                <coordinates>-117.711162,34.101807,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Daniel Rubin Sundial</name>
+            <Point>
+                <coordinates>-117.714267,34.100114,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Sophomore Gates</name>
+            <Point>
+                <coordinates>-117.711212,34.099881,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 35%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Zipcar-N. College Way &amp; N. Dartmouth Avenue</name>
+            <Point>
+                <coordinates>-117.712773,34.100711,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 3</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Honnold/Mudd Library</name>
+            <Point>
+                <coordinates>-117.712623,34.10183,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Bixby Plaza Dedication</name>
+            <Point>
+                <coordinates>-117.711324,34.100546,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Athearn Field Dedication</name>
+            <Point>
+                <coordinates>-117.710288,34.100999,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Antiquity &amp; Christianity Institute</name>
+            <Point>
+                <coordinates>-117.71336,34.102337,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 69%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Richard C. Seaver Biology Building</name>
+            <Point>
+                <coordinates>-117.716237,34.099848,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Pomona College Gateway</name>
+            <Point>
+                <coordinates>-117.714792,34.099574,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 1</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Crookshank Hall</name>
+            <Point>
+                <coordinates>-117.715826,34.099541,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 1</li><li>Resonators: 0</li><li>Health: 0%</li></ul></p>]]></description>
+            <styleUrl>#none</styleUrl>
+            <name>Little Fountain at Sontag Hall</name>
+            <Point>
+                <coordinates>-117.709701,34.100903,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 2</li><li>Resonators: 3</li><li>Health: 100%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Seaver Laboratory - Biology</name>
+            <Point>
+                <coordinates>-117.715352,34.099905,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 62%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Pitzer Hall Honorarium Fountain</name>
+            <Point>
+                <coordinates>-117.710425,34.102283,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 68%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Bixby Plaza Fountain</name>
+            <Point>
+                <coordinates>-117.711205,34.100271,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 67%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Crossing</name>
+            <Point>
+                <coordinates>-117.713492,34.100055,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 62%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>The Living Room</name>
+            <Point>
+                <coordinates>-117.710528,34.102109,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Huntley Bookstore of the Claremont Colleges</name>
+            <Point>
+                <coordinates>-117.713514,34.10174,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 67%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Frary Mural</name>
+            <Point>
+                <coordinates>-117.710968,34.100354,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 5</li><li>Resonators: 8</li><li>Health: 63%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Turrell Skyspace &amp;quot;Dividing The Light&amp;quot;</name>
+            <Point>
+                <coordinates>-117.713181,34.100103,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Walker Wall Mural</name>
+            <Point>
+                <coordinates>-117.711705,34.101379,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 3</li><li>Resonators: 8</li><li>Health: 70%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Flamson Plaza Fountains at Claremont McKenna College</name>
+            <Point>
+                <coordinates>-117.709395,34.10213,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 55%</li></ul></p>]]></description>
+            <styleUrl>#res</styleUrl>
+            <name>Library Plaza Sculpture</name>
+            <Point>
+                <coordinates>-117.712285,34.101653,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 4</li><li>Resonators: 8</li><li>Health: 60%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Clark Memorial</name>
+            <Point>
+                <coordinates>-117.711026,34.100058,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <description><![CDATA[<p><ul><li>Level: 6</li><li>Resonators: 8</li><li>Health: 59%</li></ul></p>]]></description>
+            <styleUrl>#enl</styleUrl>
+            <name>Cowart IT</name>
+            <Point>
+                <coordinates>-117.713442,34.100494,0.0</coordinates>
+            </Point>
+        </Placemark>
+<Style id="none-inactive">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B00066FF</color>
+  </IconStyle>
+  <LabelStyle><scale>0</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<Style id="none-active">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B00066FF</color>
+  </IconStyle>
+  <LabelStyle><scale>1</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<StyleMap id="none">
+    <Pair><key>normal</key><styleUrl>#none-inactive</styleUrl></Pair>
+    <Pair><key>highlight</key><styleUrl>#none-active</styleUrl></Pair>
+</StyleMap>
+<Style id="res-inactive">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B0D09205</color>
+  </IconStyle>
+  <LabelStyle><scale>0</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<Style id="res-active">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B0D09205</color>
+  </IconStyle>
+  <LabelStyle><scale>1</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<StyleMap id="res">
+    <Pair><key>normal</key><styleUrl>#res-inactive</styleUrl></Pair>
+    <Pair><key>highlight</key><styleUrl>#res-active</styleUrl></Pair>
+</StyleMap>
+<Style id="enl-inactive">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B002BF02</color>
+  </IconStyle>
+  <LabelStyle><scale>0</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<Style id="enl-active">
+  <IconStyle>
+    <Icon><href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href></Icon>
+    <color>B002BF02</color>
+  </IconStyle>
+  <LabelStyle><scale>1</scale></LabelStyle>
+  <BalloonStyle><text><![CDATA[$[description]]]></text></BalloonStyle>
+</Style>
+<StyleMap id="enl">
+    <Pair><key>normal</key><styleUrl>#enl-inactive</styleUrl></Pair>
+    <Pair><key>highlight</key><styleUrl>#enl-active</styleUrl></Pair>
+</StyleMap>
+    </Document>
+</kml>
