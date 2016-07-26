@@ -17,7 +17,7 @@ def getDict():
     file.close
     pokeDict = {}
     for ind in range(0, len(string), 3):
-        pokeDict[string[ind]] = (float(string[ind + 1]),float(string[ind + 2]),0.0)
+        pokeDict[string[ind]] = (float(string[ind + 2]),float(string[ind + 1]),0.0)
     #print(pokeDict)
     KMLDict= kmlPokeDict.getKMLStops()
     return KMLDict, pokeDict
@@ -94,18 +94,20 @@ def main():
     KMLDict, pokeDict = getDict()
     distDict = getDistDict(pokeDict)
     listOfCoors = []
+    print(pokeDict)
+    greedyTravellingSalesman(pokeDict, KMLDict)
     # seed(time())
 
-def greedyTravellingSalesman(pokeDict, KMLDict, )
+def greedyTravellingSalesman(pokeDict, KMLDict):
     newDict = {}
     for name, location in KMLDict.items():
         for idName, place in pokeDict.items():
             if location == place:
                 newDict[name] = place
     pokeDict = newDict
+    listOfCoors = []
     for loc in pokeDict.keys():
         listOfCoors.append(pokeDict[loc])
-
 
     path = minDist.optimized_travelling_salesman(listOfCoors)
     idPath = []

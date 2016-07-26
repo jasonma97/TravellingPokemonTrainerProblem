@@ -50,7 +50,7 @@ def getKMLStops():
         #print(elem, end = ": \n")
         #print(pokeDict[elem], end = '\n\n')
         string = pokeDict[elem].split(',')
-        pokeDict[elem] = (float(string[1]), float(string[0]), 0.0)
+        pokeDict[elem] = (float(string[0]), float(string[1]), 0.0)
 
     #print(pokeDict['Sombrero Duck'])
     #print(numEntries)
@@ -91,7 +91,7 @@ def pokeDictFromFile(filename):
         numEntries += 1
 
         string = pokeDict[elem].split(',')
-        pokeDict[elem] = (float(string[1]), float(string[0]), 0.0)
+        pokeDict[elem] = (float(string[0]), float(string[1]), 0.0)
 
     return(pokeDict)
  
