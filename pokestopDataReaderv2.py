@@ -7,13 +7,13 @@ import itertools
 import geneticAlgorithmTSP
 
 FILENAME = 'pokestopdata2.txt'
-MAXPOKESTOPS = 20
+MAXPOKESTOPS = 15
 #A path length of 1 is staying put
 #I'm not counting paths of length 1
-MINPATHLENGTH = 2
+MINPATHLENGTH = 4
 #Needed to find the most optimal subsections of paths
 #Set limit, so we don't try anything above 10!, we brute force it (yea I know it's bad)
-SUBPATHLIMIT = 10
+SUBPATHLIMIT = 7
 CHARACTERISTICLENGTH = 4
 class PokeStop:
     def __init__(self, pokeID, name, loc):
@@ -23,6 +23,22 @@ class PokeStop:
 
     def __repr__(self):
         return   self.name + ':' +  str(self.loc)
+
+    def closestNStops( self, N, pokeList, excludeList ):
+        closestStops = []
+        farthestStop = 0
+        for a0 in range(len(pokeList)):
+            if pokeList[a0] == self or pokeList[a0] in excludeList:
+                continue
+            closestStops.append(pokeList[a0])
+            if len(closestStops) > N:
+                closestStops = sorted(closestStops, key = lambda stop: self.distanceToStop(stop))
+                closestStops = closestStops[:N]
+        return closestStops
+                
+
+    def distanceToStop(self, other):
+        return getDistanceBetweenPokeStops(self, other)
 
 class Trainer:
     def __init__(self, speed = 3):
@@ -75,7 +91,9 @@ class Trainer:
         #print()
         #print(self.fitness)
         #print(self.pathTaken)
-        self.fitness = (len(self.pathTaken) + 1)/ (self.distanceWalked + getDistanceBetweenPokeStops(self.pathTaken[0], self.pathTaken[-1])) * ((len(self.pathTaken) - MINPATHLENGTH) / len(self.pathTaken))
+        self.fitness = (len(self.pathTaken)) / self.distanceWalked #* (len(self.pathTaken) - 3)/len(self.pathTaken)
+        #self.fitness = (len(self.pathTaken) + 1)/ (self.distanceWalked + getDistanceBetweenPokeStops(self.pathTaken[0], self.pathTaken[-1]))
+        #self.fitness *= (len(self.pathTaken) - MINPATHLENGTH)/len(self.pathTaken)
         return self.fitness
 
     def distanceWalked(self):
@@ -112,6 +130,8 @@ class Generation:
 
     def bestTrainers(self):
         sortedTrainerL = sorted(self.trainerL, key = lambda trainer: trainer.fitness)
+        #print(sortedTrainerL[-3:])
+        sortedTrainerL[-self.individualsToKeep:]
         return sortedTrainerL[-self.individualsToKeep:]
 
     def evolveGen(self):
@@ -150,11 +170,12 @@ class Generation:
             trainerStartPath = randint(MINPATHLENGTH, MAXPOKESTOPS)
             trainerPath = sample(self.pokeList, trainerStartPath)
             trainer.updatePath( trainerPath )
+            trainer.optimizeCurrentPath()
 
     def cull(self):
         mean = self.meanFitness()
         stdDev = self.stdDev()
-        newTrainerL = [trainer for trainer in self.trainerL if (trainer.fitness - mean) < -stdDev]
+        newTrainerL = [trainer for trainer in self.trainerL if (trainer.fitness) < mean + stdDev]
         #self.trainerL = newTrainerL
         while(len(newTrainerL) < self.genSize):
             newTrainerL.append(self.mate())
@@ -162,14 +183,14 @@ class Generation:
         return newTrainerL
 
     def genOffspring( self ):
-        if random() > 0.5:
+        if random() > 0.4:
             trainer = Trainer()
             newPath = []
             newPath = sample(self.pokeList, int(MAXPOKESTOPS/2) + 2)
             trainer.updatePath(newPath)
             return trainer
         else:
-            bestTrainer = self.bestTrainers()[-1]
+            bestTrainer = choice(self.bestTrainers())
             trainer = Trainer()
             if len(bestTrainer.pathTaken) < SUBPATHLIMIT:
                 newPath = bestTrainer.highestScoringSubset()
@@ -178,6 +199,7 @@ class Generation:
             newPathExtra = [thing for thing in sample(self.pokeList, int(MAXPOKESTOPS/2)) if thing not in newPath]
             newPath+= newPathExtra
             trainer.updatePath(newPath)
+            trainer.optimizeCurrentPath()
             return trainer
 
     def mate(self):
@@ -220,7 +242,7 @@ def getDict():
     return KMLDict, pokeDict
 
 def getDistanceBetweenPokeStops(startPoint, endPoint):
-    return ((startPoint.loc[0] - endPoint.loc[0])**2 + (startPoint.loc[1] - endPoint.loc[1])**2)**0.5
+    return ((startPoint.loc[0] - endPoint.loc[0])**2 + (startPoint.loc[1] - endPoint.loc[1])**2)**0.5 
 
 #Depracated
 # def getDistDict( pokeDict ):
@@ -268,17 +290,19 @@ def geneticImp(pokeList):
     print("Initial distance: " + str(pop.getFittest().getDistance()))
     ga = geneticAlgorithmTSP.GA(tourManager)
     pop = ga.evolvePopulation(pop)
-    for i in range(0, 1000):
+    for i in range(0, 10000):
+      print(i)
       pop = ga.evolvePopulation(pop)
     print("Finished")
     print("Final distance: " + str(pop.getFittest().getDistance()))
     print("Solution:")
     print(pop.getFittest())
+    print(119/pop.getFittest().getDistance() /112)
     return pop.getFittest()
 
 
 def geneticAlgorithm(pokeList):
-    gen = Generation(100, 0.50, None, 1, 0, pokeList, distDict)
+    gen = Generation(100, 0.05, None, 5, 0, pokeList, distDict)
     gen.spawn()
     #print(gen.trainerL)
     #print()
@@ -307,23 +331,120 @@ def geneticAlgorithm(pokeList):
     # print(bestTrainer.highestScoringSubset())
     return bestTrainer
 
+def greedy( pokeList, start , visited):
+    if start == None:
+        start = choice(pokeList)
+
+    visited.append(start)
+    #print(visited)
+    closestTwoStops = sombDuck.closestNStops( 2, pokeList, visited)
+    f = lambda x: greedy(pokeList, x, visited)
+    #print(start.distanceToStop(closestTwoStops[0]) * 112)
+    #print(closestTwoStops)
+    closestTwoStops = [thing for thing in closestTwoStops if start.distanceToStop(thing) * 112 < 0.500]
+    #print(closestTwoStops)
+    twoPossibilities = [f(x) for x in closestTwoStops]
+    if len(twoPossibilities) == 0:
+        return visited
+    if len(twoPossibilities) == 1:
+        return twoPossibilities[0]
+    if getPathLength(twoPossibilities[0]) > getPathLength(twoPossibilities[1]):
+        return twoPossibilities[1]
+    else:
+        return twoPossibilities[0]
+
+
+
 def main():
     KMLDict, pokeDict = getDict()
     pokeList = [PokeStop(elem, key, KMLDict[key]) for key in KMLDict.keys() for elem in pokeDict.keys() if pokeDict[elem] == KMLDict[key]]
 
     global distDict
     distDict, refDict = getDistanceDictionary(pokeList)
+
+    bestNLengthSegments = []
+    counter = 0
+    N = 4
+    bestToKeep = 1000
+    print('hey')
+    for x in itertools.combinations(pokeList, N):
+        trainer = Trainer()
+        trainer.updatePath(x)
+        trainer.optimizeCurrentPath()
+        if len(bestNLengthSegments) < bestToKeep:
+            bestNLengthSegments.append(trainer)
+            if len(bestNLengthSegments) == 1:
+                worstFitness = trainer.fitness
+            if trainer.fitness < worstFitness:
+                worstFitness = trainer.fitness
+        elif trainer.fitness > worstFitness:
+            bestNLengthSegments.append(trainer)
+            bestNLengthSegments = sorted(bestNLengthSegments, key = lambda x: x.fitness)
+            bestNLengthSegments = bestNLengthSegments[1:]
+            worstFitness = bestNLengthSegments[0].fitness
+        #print(x)
+    print(bestNLengthSegments)
+    #print(bestNLengthSegments[-1].fitness)
+    combinedL = []
     
-    bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
-    gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
+    longestDistance = 5
+    longestPath = []
+    while(True):
+        changeMade = False
+        for endStop in bestNLengthSegments:
+            for startStop in bestNLengthSegments:
+                if endStop.pathTaken[-1] == startStop.pathTaken[0]:
+                    changeMade = True
+                    newPath = endStop.pathTaken + startStop.pathTaken[1:]
+                    endStop.updatePath(newPath)
+                    bestNLengthSegments.remove(startStop)
+                    combinedL.append(endStop)
+                    if len(newPath) > longestDistance:
+                        longestPath = newPath
+                        longestDistance = len(newPath)
+        if not changeMade:
+            break
+    #print()
+    #print(bestNLengthSegments)
+    #print()
+    print(combinedL)
+    print(longestDistance)
+    print(longestPath)
+    #print(2/distDict['Sombrero Duck', 'Tiered Fountain'] /112)
 
-    for a0 in range(1000):
-        gen.evolveGen()
+    # geneticImp(pokeList)
+    # global sombDuck
+    # for thing in pokeList:
+    #     if thing.name == 'Sombrero Duck':
+    #         sombDuck = thing
 
-    bestTrainer = gen.bestTrainers()[-1]
-    print(bestTrainer)
-    print(bestTrainer.fitness)
-    print(bestTrainer.distanceWalked)
+    #print(sombDuck.closestNStops(2, pokeList))
+    # greedyL = [greedy(pokeList, None, []) for a0 in range(1000)]
+    # greedyL = sorted(greedyL, key = lambda x: getPathLength(x))
+    # for a0 in greedyL:
+    #     if len(a0) > 5:
+    #         print(a0)
+    #         print(getPathLength(a0))
+    #         print(len(a0))
+    #         break
+    #print(greedyL[0])
+    # bestTrainer = geneticAlgorithm(pokeList)
+    # bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
+    # gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
+
+    # for a0 in range(100):
+    #     gen.evolveGen()
+
+    # bestTrainerL = sorted(gen.trainerL, key = lambda trainer: trainer.fitness)
+    # bestTrainer = bestTrainerL[-1]
+
+    # for trainer in bestTrainerL:
+    #     print(trainer)
+    #     print(trainer.fitness)
+    #     print(trainer.distanceWalked) 
+    # print(bestTrainer)
+    # print(bestTrainer.fitness)
+    # print(bestTrainer.distanceWalked)
 
     # listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
 
@@ -389,17 +510,17 @@ def bruteForce( pokeList):
             for fill in pathList:
                 newPath.append(pokeList[fill])
             currentPathDistance = getPathLength( newPath )
-            efficiency = float(len(pathList)) / currentPathDistance
+            efficiency = float(len(pathList)) / (currentPathDistance )
             #print(efficiency)
             #print(efficiency > highestEfficiency)
             if efficiency > highestEfficiency:
-                #print("New Best Path = " + str(dictIndex))
-                #print("Efficiency: " + str(efficiency / 100))
-                #print("Length of Path = " + str(currentPathDistance))
-                #print("Number of Stops = " + str(len(pathList)))
-                #print("Path = " + str(pathList))
-                #print(counter)
-                #print()
+                # print("New Best Path = " + str(dictIndex))
+                # print("Efficiency: " + str(efficiency / 100))
+                # print("Length of Path = " + str(currentPathDistance))
+                # print("Number of Stops = " + str(len(pathList)))
+                # print("Path = " + str(pathList))
+                # print(counter)
+                # print()
 
                 highestEfficiency = efficiency
                 bestPath = newPath
