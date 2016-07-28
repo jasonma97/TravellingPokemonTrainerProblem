@@ -79,7 +79,7 @@ class Trainer:
         return distanceWalked
 
     def optimizeCurrentPath(self):
-        self.updatePath(optimizePath(self.pathTaken))
+        self.updatePath(optimizePath(self.pathTaken, len(self.pathTaken)))
 
     def getCurrentCity(self):
         return pathTaken[-1]
@@ -91,9 +91,9 @@ class Trainer:
         #print()
         #print(self.fitness)
         #print(self.pathTaken)
-        self.fitness = (len(self.pathTaken)) / self.distanceWalked #* (len(self.pathTaken) - 3)/len(self.pathTaken)
-        #self.fitness = (len(self.pathTaken) + 1)/ (self.distanceWalked + getDistanceBetweenPokeStops(self.pathTaken[0], self.pathTaken[-1]))
-        #self.fitness *= (len(self.pathTaken) - MINPATHLENGTH)/len(self.pathTaken)
+        #self.fitness = (len(self.pathTaken)) / self.distanceWalked #* (len(self.pathTaken) - 3)/len(self.pathTaken)
+        self.fitness = (len(self.pathTaken) + 1)/ (self.distanceWalked + getDistanceBetweenPokeStops(self.pathTaken[0], self.pathTaken[-1]))
+        self.fitness *= (len(self.pathTaken) - 2)/len(self.pathTaken)
         return self.fitness
 
     def distanceWalked(self):
@@ -220,8 +220,8 @@ class Generation:
         return (variance/self.genSize)**0.5
 
 
-def optimizePath(pathL):
-    return bruteForce( pathL )
+def optimizePath(pathL, sizeRestriction = None):
+    return bruteForce( pathL, sizeRestriction )
 
 
 def getDict():
@@ -353,6 +353,108 @@ def greedy( pokeList, start , visited):
     else:
         return twoPossibilities[0]
 
+def cluster(pokeList):
+    st = time()
+    bestNLengthSegments = []
+    counter = 0
+    N = 5
+    bestToKeep = 5500
+    #print('hey')
+    for x in itertools.combinations(pokeList, 4):
+        #print(x)
+        if len(x) == 4:
+            trainer = Trainer()
+            trainer.updatePath(x)
+            trainer.optimizeCurrentPath()
+            #print(len(trainer.pathTaken))
+            if len(bestNLengthSegments) < bestToKeep:
+                if trainer not in bestNLengthSegments:
+                    bestNLengthSegments.append(trainer)
+                    if len(bestNLengthSegments) == 1:
+                        worstFitness = trainer.fitness
+                    if trainer.fitness < worstFitness:
+                        worstFitness = trainer.fitness
+                    #print(len(trainer.pathTaken))
+                else:
+                    print('There was a copy!')
+            elif trainer.fitness > worstFitness:
+                bestNLengthSegments.append(trainer)
+                bestNLengthSegments = sorted(bestNLengthSegments, key = lambda x: x.fitness, reverse = True)
+                bestNLengthSegments = bestNLengthSegments[:-1]
+                worstFitness = bestNLengthSegments[-1].fitness
+            counter += 1
+            #if counter > 1000000:
+                #break
+        #print(x)
+    #print(bestNLengthSegments[-1].fitness)
+    combinedL = []
+    bestNLengthSegments = sorted(bestNLengthSegments, key = lambda trainer: trainer.fitness, reverse = True)
+
+    print((bestNLengthSegments))
+    longestDistance = 0
+    longestTrainer = Trainer()
+    longestPath = []
+
+    bestFitness = 0
+    bestPath = []
+    counter = 0
+    while(True):
+        changeMade = False
+        attempt2 = False
+        for endStop in bestNLengthSegments:
+            for startStop in bestNLengthSegments:
+                #print((endStop.pathTaken))
+                #print((startStop.pathTaken))
+                #print(endStop.pathTaken[-1] == startStop.pathTaken[0])
+                #print(endStop.pathTaken[0])
+                if endStop.pathTaken[-1] == startStop.pathTaken[0]:
+                    newPath = endStop.pathTaken + startStop.pathTaken[1:]
+                    newTrainer = Trainer()
+                    newTrainer.updatePath(newPath)
+                    if newTrainer.pathTaken not in combinedL:
+
+                        print(1)
+                        changeMade = True
+                        combinedL.append(newTrainer.pathTaken)
+                        bestNLengthSegments.append(newTrainer)
+                        # if startStop in bestNLengthSegments:
+                        #     bestNLengthSegments.remove(startStop)
+                        # if endStop in bestNLengthSegments:
+                        #     bestNLengthSegments.remove(endStop)
+
+                        if len(newPath) > longestDistance:
+                            longestPath = newPath
+                            longestTrainer.updatePath(newPath)
+                            longestDistance = len(newPath)
+                            #print(longestTrainer)
+                        elif len(newPath) == longestDistance:
+                            if newTrainer.fitness > longestTrainer.fitness:
+                                longestTrainer.updatePath(newTrainer.pathTaken)
+                                longestPath = newPath
+                    # if newTrainer.fitness > bestFitness:
+                    #     bestPath = newTrainer
+                    #     bestFitness = newTrainer.fitness
+
+                counter += 1
+                #print(counter)
+        #bestNLengthSegments  = combinedL
+        if not changeMade:
+            if not attempt2:
+                break
+    #print()
+    #print(bestNLengthSegments)
+    #print()
+    print(combinedL)
+    trainer = Trainer()
+    trainer.updatePath(longestPath)
+    print(longestDistance)
+    print(longestPath)
+    print(len(longestPath))
+    print(trainer.fitness)
+    print(len(bestNLengthSegments))
+    #print(bestFitness)
+    #print(bestPath)
+    print(time() - st)
 
 
 def main():
@@ -361,55 +463,9 @@ def main():
 
     global distDict
     distDict, refDict = getDistanceDictionary(pokeList)
+    cluster( pokeList )
 
-    bestNLengthSegments = []
-    counter = 0
-    N = 4
-    bestToKeep = 1000
-    print('hey')
-    for x in itertools.combinations(pokeList, N):
-        trainer = Trainer()
-        trainer.updatePath(x)
-        trainer.optimizeCurrentPath()
-        if len(bestNLengthSegments) < bestToKeep:
-            bestNLengthSegments.append(trainer)
-            if len(bestNLengthSegments) == 1:
-                worstFitness = trainer.fitness
-            if trainer.fitness < worstFitness:
-                worstFitness = trainer.fitness
-        elif trainer.fitness > worstFitness:
-            bestNLengthSegments.append(trainer)
-            bestNLengthSegments = sorted(bestNLengthSegments, key = lambda x: x.fitness)
-            bestNLengthSegments = bestNLengthSegments[1:]
-            worstFitness = bestNLengthSegments[0].fitness
-        #print(x)
-    print(bestNLengthSegments)
-    #print(bestNLengthSegments[-1].fitness)
-    combinedL = []
-    
-    longestDistance = 5
-    longestPath = []
-    while(True):
-        changeMade = False
-        for endStop in bestNLengthSegments:
-            for startStop in bestNLengthSegments:
-                if endStop.pathTaken[-1] == startStop.pathTaken[0]:
-                    changeMade = True
-                    newPath = endStop.pathTaken + startStop.pathTaken[1:]
-                    endStop.updatePath(newPath)
-                    bestNLengthSegments.remove(startStop)
-                    combinedL.append(endStop)
-                    if len(newPath) > longestDistance:
-                        longestPath = newPath
-                        longestDistance = len(newPath)
-        if not changeMade:
-            break
-    #print()
-    #print(bestNLengthSegments)
-    #print()
-    print(combinedL)
-    print(longestDistance)
-    print(longestPath)
+
     #print(2/distDict['Sombrero Duck', 'Tiered Fountain'] /112)
 
     # geneticImp(pokeList)
@@ -493,14 +549,17 @@ def getNamedPath(pathList, pokeList):
 def allPathGenerator( numOfStops ):
     return itertools.chain(*map(lambda x: itertools.combinations(numOfStops, x), range(0, len(numOfStops) + 1)))
 
-def bruteForce( pokeList):
+def bruteForce( pokeList, pathSize = None):
     highestEfficiency = 0
     bestPath = []
     bestPathDict = {}
     dictIndex = 0
     counter = 0
     allCombinations = allPathGenerator( list( range( len(pokeList) ) ) )
-    excludablePaths = 2
+    if pathSize == None:
+        excludablePaths = 2
+    else:
+        excludablePaths = pathSize - 1
     #max(int(float(len(pokeList))  * 0.1), 1)
     for combination in allCombinations:
         pathList = list(combination)
@@ -528,6 +587,7 @@ def bruteForce( pokeList):
                 dictIndex+=1
         #print(counter)
         counter += 1
+    #print(len(bestPath))
     return bestPath
 
 
