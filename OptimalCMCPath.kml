@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengic.net/kml/2.2">
+   <Document>
+      <Name>OptimalCMCPath</Name>
+      <Placemark>
+         <name>The Honnold Library</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.712647,34.102488,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Honnold/Mudd Library</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.712623,34.10183,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Library Plaza Sculpture</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.712285,34.101653,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Kravis Dedication Plaque</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.711162,34.101807,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Flamson Plaza Fountains at Claremont McKenna College</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.709395,34.10213,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Collins Dining Hall</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.708461,34.101483,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Pacesetter Patio Honorarium</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.708068,34.101949,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Class Dedication</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.707737,34.10193,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Edward S. Gould Memorial</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.707785,34.10017,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Stark Hall (Winter Is Coming)</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.70771,34.099998,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Style id="icon-959-4186F0-nodesc-normal">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>0.0</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <Style id="icon-959-4186F0-nodesc-highlight">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>1.1</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <StyleMap id="icon-959-4186F0-nodesc">
+         <Pair>
+            <key>normal</key>
+            <styleUrl>#icon-959-4186F0-nodesc-normal</styleUrl>
+         </Pair>
+         <Pair>
+            <key>highlight</key>
+            <styleUrl>#icon-959-4186F0-nodesc-highlight</styleUrl>
+         </Pair>
+      </StyleMap>
+   </Document>
+</kml>

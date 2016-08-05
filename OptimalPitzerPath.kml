@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengic.net/kml/2.2">
+   <Document>
+      <Name>OptimalPitzerPath</Name>
+      <Placemark>
+         <name>Provida Futuri</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.704888,34.104321,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Dragon Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.704972,34.103682,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Truth Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.705102,34.103276,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Living Room Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.704505,34.103338,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Orange World Wall Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.705481,34.102543,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>McConnell Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.706035,34.103,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Fletcher Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.706434,34.103829,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Pitzer Gates</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.706973,34.103808,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Bernard Hall</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.706413,34.10442,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Brant Tower at Pitzer College</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.705544,34.104705,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Sex Industry Worker</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.704833,34.105171,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Regionally Appropriate Landscape Demonstration Garden</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.707242,34.104994,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Style id="icon-959-4186F0-nodesc-normal">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>0.0</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <Style id="icon-959-4186F0-nodesc-highlight">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>1.1</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <StyleMap id="icon-959-4186F0-nodesc">
+         <Pair>
+            <key>normal</key>
+            <styleUrl>#icon-959-4186F0-nodesc-normal</styleUrl>
+         </Pair>
+         <Pair>
+            <key>highlight</key>
+            <styleUrl>#icon-959-4186F0-nodesc-highlight</styleUrl>
+         </Pair>
+      </StyleMap>
+   </Document>
+</kml>

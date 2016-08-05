@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengic.net/kml/2.2">
+   <Document>
+      <Name>OptimalVillagePath</Name>
+      <Placemark>
+         <name>Chess Tables</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.716578,34.095821,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Claremont Library</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.716123,34.096132,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Truck of Plants</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.715526,34.096762,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Claremont Blue Cow Sculpture </name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.716801,34.096719,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Bunny Gunner</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.71738,34.096569,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Bert and Rockyapos;s Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.717799,34.096561,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Delhi Patio Fountain</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.718275,34.096931,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Claremont Alley Art</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.717425,34.095969,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Alley Iron Works</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.717231,34.095708,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Verbal Building</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.717789,34.09571,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Claremont Village Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.718012,34.095241,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>California Bank and Trust Tower</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.717787,34.09484,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Pink Lotus Mural</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.716932,34.094772,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Intricate Red Circles</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.716524,34.095183,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Healthy Tree Plaque</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.719164,34.094994,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Matriculated Nature Fountain</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.719706,34.095273,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Casa 425 Tri-Fountain</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.720065,34.094966,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Upper Deck Art Installation</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.71989,34.094482,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Placemark>
+         <name>Claremont Historic Packing House </name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.720856,34.094468,0.0</coordinates>
+         </Point>
+      </Placemark>
+      <Style id="icon-959-4186F0-nodesc-normal">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>0.0</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <Style id="icon-959-4186F0-nodesc-highlight">
+         <IconStyle>
+            <color>ffF08641</color>
+            <scale>1.1</scale>
+            <Icon>
+               <href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+            </Icon>
+         </IconStyle>
+         <LabelStyle>
+            <scale>1.1</scale>
+         </LabelStyle>
+         <BalloonStyle>
+            <text><![CDATA[<h3>$[name]</h3>]]></text>
+         </BalloonStyle>
+      </Style>
+      <StyleMap id="icon-959-4186F0-nodesc">
+         <Pair>
+            <key>normal</key>
+            <styleUrl>#icon-959-4186F0-nodesc-normal</styleUrl>
+         </Pair>
+         <Pair>
+            <key>highlight</key>
+            <styleUrl>#icon-959-4186F0-nodesc-highlight</styleUrl>
+         </Pair>
+      </StyleMap>
+   </Document>
+</kml>

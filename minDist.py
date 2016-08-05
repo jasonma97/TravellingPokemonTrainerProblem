@@ -26,6 +26,20 @@ def total_distance(points):
     """
     return sum([distance(point, points[index + 1]) for index, point in enumerate(points[:-1])])
 
+def total_distance_loop(points):
+    """
+    Returns the length of the path passing throught
+    all the points in the given order.
+
+    >>> total_distance([[1,2],[4,6]])
+    5.0
+    >>> total_distance([[3,6],[7,6],[12,6]])
+    9.0
+    """
+    totalD = sum([distance(point, points[index + 1]) for index, point in enumerate(points[:-1])])
+    totalD += distance(points[0],points[-1])
+    return totalD
+
 
 def travelling_salesman(points, start=None):
     """
@@ -39,7 +53,7 @@ def travelling_salesman(points, start=None):
     """
     if start is None:
         start = points[0]
-    return min([perm for perm in permutations(points) if perm[0] == start], key=total_distance)
+    return min([perm for perm in permutations(points) if perm[0] == start], key=total_distance_loop)
 
 
 def optimized_travelling_salesman(points, start=None):
@@ -64,7 +78,7 @@ def optimized_travelling_salesman(points, start=None):
     must_visit.remove(start)
     while must_visit:
         nearest = min(must_visit, key=lambda x: distance(path[-1], x))
-        if distance(path[-1], nearest) > 0.003:
+        if distance(path[-1], nearest) > 0.05:
             return path
         path.append(nearest)
         must_visit.remove(nearest)

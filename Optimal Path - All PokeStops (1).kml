@@ -1,0 +1,915 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Optimal Path - All PokeStops</name>
+		<Placemark>
+			<name>Truck of Plants</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.715526,34.096762,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+         <name>The Honnold Library</name>
+         <styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+         <Point>
+            <coordinates>-117.712647,34.102488,0.0</coordinates>
+         </Point>
+        </Placemark>
+		<Placemark>
+			<name>Alison Saar 78 Swing Low Harriet Tubman Memorial 2007</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712004,34.104965,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Library</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716123,34.096132,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CGU Clock Tower</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713775,34.103084,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fountain at Pomona College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.715782,34.098962,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seaver Laboratory - Biology</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.715352,34.099905,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Haldeman</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709437,34.09878,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>American Legion Veteran Memorial Plaque</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.720019,34.102588,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Upper Deck Art Installation</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71989,34.094482,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Class Dedication</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707737,34.10193,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Memorial Walk</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714597,34.098541,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pomona College Entrance</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714727,34.094832,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Boulevard</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.704359,34.095236,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ruth Chandler Williamson Gallery</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71179,34.104462,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Scripps College C/O 99</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710052,34.105101,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Walker Wall Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711705,34.101379,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>R. Michael Shanahan Center for Teaching and Learning</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710882,34.106423,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Historic Packing House</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.720856,34.094468,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Swallows Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709241,34.105214,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pomona College Amphitheatre</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709328,34.097152,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Harvey Mudd Crest</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711046,34.105648,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Village Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.718012,34.095241,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fletcher Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.706434,34.103829,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Colleges Sign</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713009,34.106816,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Harvey S. Mudd Quadrangle</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712662,34.102964,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Matriculated Nature Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.719706,34.095273,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sea Life Mosaic</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709853,34.102679,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kravis Dedication Plaque</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711162,34.101807,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bert and Rockyapos;s Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.717799,34.096561,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Alley Iron Works</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.717231,34.095708,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Scripps College Entrance</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711338,34.102711,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Beverly Sills Quote</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.708377,34.103013,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dragon Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.704972,34.103682,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Scripps Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.70913,34.104528,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Harvey Mudd College Entrance</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713071,34.106419,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bixby Plaza Dedication</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711324,34.1005815,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ella Strong Denison Library</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711475,34.104266,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pitzer Gates</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.7069515,34.103808,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Little Fountain at Sontag Hall</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709701,34.100903,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Andrew Carnegie White House</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.715163,34.098125,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>May Peace Prevail on Earth</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.7126,34.097108,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Motion Shield Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709575,34.106138,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pomona College South Entrance</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711075,34.094844,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hixon Court Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711593,34.10612,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pacesetter Patio Honorarium</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.708068,34.101949,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Norman F Sprague Memorial Library</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713473,34.105458,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sombrero Duck</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707305,34.10596,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>The Goddess Pomona</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713766,34.099,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Draper Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712416,34.098767,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Delhi Patio Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.718275,34.096931,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seeley Mudd Quadrangle Memorial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.708341,34.106114,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Athearn Field Dedication</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710288,34.100999,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Library Plaza Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712285,34.101653,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Smith Memorial Tower</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71143,34.100076,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Edward S. Gould Memorial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707785,34.10017,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bernard Hall</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.706413,34.10442,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Honnold/Mudd Library</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712623,34.10183,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Square Block Mosaic</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710426,34.105908,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa 425 Tri-Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.720065,34.094966,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Studio Art Hall</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71096,34.097193,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Regionally Appropriate Landscape Demonstration Garden</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707242,34.104994,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Astronomical Sun Dial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.70906,34.106063,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pink Lotus Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716932,34.094772,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>McConnell Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.706035,34.103,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Brant Tower at Pitzer College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.705544,34.104705,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Huntley Bookstore of the Claremont Colleges</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713514,34.10174,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>California Bank and Trust Tower</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.717787,34.09484,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seaver Laboratory - Chemistry</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.715263,34.100386,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wheaton Memorial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712783,34.099334,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sex Industry Worker</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.704833,34.105171,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Man And Nature Albert Stewart</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71041,34.103536,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Clifford Nott Handapos;oo Memorial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713762,34.097702,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Abstract Metal Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.719506,34.098431,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Masonic Lodge</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.718181,34.101487,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Woman Statue</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709404,34.09567,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Denison Library</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710874,34.104063,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pegasus Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710359,34.102707,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Museum of Art</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714731,34.0969822,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Verbal Building</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.717789,34.0957278,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Galileo Plaza</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707209,34.10573,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Intricate Red Circles</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716524,34.095183,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Orange World Wall Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.705481,34.102543,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Provida Futuri</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.704888,34.104321,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Antiquity  Christianity Institute</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71336,34.102337,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Heritage House</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.719713,34.102401,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Flamson Plaza Fountains at Claremont McKenna College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709395,34.10213,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stark Hall (Winter Is Coming)</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.70771,34.099998,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Queer Resource Center  Walton Commons</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71009,34.099819,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Four Players Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711385,34.099107,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>The Garrison Theater of the Claremont Colleges</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712609,34.103548,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Disco Egg</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.710126,34.09686,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Tiered Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707193,34.106238,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Grace Scripps Clark</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711054,34.104577,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Collins Dining Hall</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.708461,34.101483,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Steele Observatory at Pomona College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709953,34.097632,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bridges Auditorium</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.712472,34.098127,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Eternal Primitive</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709701,34.10387,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Turrell Skyspace Dividing The Light</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713181,34.100103,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Healthy Tree Plaque</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.719164,34.094994,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chess Tables</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716578,34.095821,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Truth Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.705102,34.103276,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pond Fountain</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.711156,34.103655,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Living Room Mural</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.704505,34.103338,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fowler Garden at Scripps College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.709449,34.1037598,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pomona College Gateway</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714792,34.099574,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mason Hall</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716385,34.09921,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Richard C. Seaver Biology Building</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716237,34.099848,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Luminous Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.713776,34.103735,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Strehle Track Dedication</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.707171,34.099027,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont McKenna College</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.703078,34.102404,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Claremont Blue Cow Sculpture</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.716801,34.096719,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Citrus Angel</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.719789,34.09882,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dorothy Vance Edwards Memorial Plaque</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714204,34.097007,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Daniel Rubin Sundial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714267,34.100114,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>The Artist - John Mason</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.714467,34.097184,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Seaver Theatre Memorial</name>
+			<styleUrl>#icon-959-4186F0-nodesc</styleUrl>
+			<Point>
+				<coordinates>-117.71092,34.096626,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Polygon 117</name>
+			<styleUrl>#poly-4186F0-1-76-nodesc</styleUrl>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-117.7166605,34.1003804,0.0 -117.7168751,34.098799,0.0 -117.7155018,34.0974308,0.0 -117.7150512,34.0964535,0.0 -117.7149439,34.0948899,0.0 -117.7149653,34.0943745,0.0 -117.7110171,34.094339,0.0 -117.7091503,34.0945345,0.0 -117.7083564,34.0959915,0.0 -117.7083993,34.0975197,0.0 -117.7086139,34.0986924,0.0 -117.7088284,34.0991366,0.0 -117.7091503,34.0993143,0.0 -117.7094507,34.099794,0.0 -117.7094293,34.1005048,0.0 -117.7094293,34.1012688,0.0 -117.7100515,34.1013576,0.0 -117.7115321,34.1016775,0.0 -117.7117252,34.1026458,0.0 -117.7126586,34.1026813,0.0 -117.713635,34.1026725,0.0 -117.7142143,34.1016242,0.0 -117.7153516,34.1008068,0.0 -117.7164888,34.1004515,0.0 -117.7166605,34.1003804,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Style id='icon-959-4186F0-nodesc-normal'>
+			<IconStyle>
+				<color>ffF08641</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-959-4186F0-nodesc-highlight'>
+			<IconStyle>
+				<color>ffF08641</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/959-wht-circle-blank.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-959-4186F0-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-959-4186F0-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-959-4186F0-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-4186F0-1-76-nodesc-normal'>
+			<LineStyle>
+				<color>ffF08641</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>4CF08641</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-4186F0-1-76-nodesc-highlight'>
+			<LineStyle>
+				<color>ffF08641</color>
+				<width>2.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>4CF08641</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-4186F0-1-76-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-4186F0-1-76-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-4186F0-1-76-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
