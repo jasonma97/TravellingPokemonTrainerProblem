@@ -533,12 +533,12 @@ def main():
     #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.09695 and pokestop.loc[0] < -117.71552)]
 
     #CMC
-    #pokeList = [pokeStop for pokeStop in pokeList if (pokeStop.loc[1] < 34.10257 and pokeStop.loc[1] > 34.09964 and pokeStop.loc[0] < -117.70712 and pokeStop.loc[0] > -117.70929) or \
-    #(pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71405 and pokeStop.loc[0] < -117.70696)]
+    pokeList = [pokeStop for pokeStop in pokeList if (pokeStop.loc[1] < 34.10257 and pokeStop.loc[1] > 34.09964 and pokeStop.loc[0] < -117.70712 and pokeStop.loc[0] > -117.70929) or \
+    (pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71305 and pokeStop.loc[0] < -117.70696)]
     
     #pokeList.remove(spot)
     print(len(pokeList))
-    #pokeList = mergeStops(pokeList)
+    pokeList = mergeStops(pokeList)
 
     print(len(pokeList))
     # for poke in pokeList:
@@ -548,13 +548,13 @@ def main():
     distDict, refDict = getDistanceDictionary(pokeList)
 
     #print(calcLowerBound(pokeList, distDict))
-    path = branchAndBound(pokeList, distDict)
+    #path = branchAndBound(pokeList, distDict)
     #path = bruteForce(pokeList, 15)
-    #listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
-    #path = minDist.travelling_salesman(listOfCoors)
-    #path = getNamedPath(path, pokeList)
-    #print(path)
-    #kmlPokeDict.writeKMLFile('OptimalPomonaPath.kml', path)
+    listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
+    path = minDist.travelling_salesman(listOfCoors)
+    path = getNamedPath(path, pokeList)
+    print(path)
+    kmlPokeDict.writeKMLFile('OptimalMuddPath.kml', path)
     
     #cluster( pokeList )
 
