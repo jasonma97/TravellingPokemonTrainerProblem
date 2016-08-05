@@ -24,7 +24,7 @@ class PokeStop:
     def __repr__(self):
         return   self.name + ':' +  str(self.loc)
 
-    def closestNStops( self, N, pokeList, excludeList ):
+    def closestNStops( self, N, pokeList, excludeList = []):
         closestStops = []
         farthestStop = 0
         for a0 in range(len(pokeList)):
@@ -458,14 +458,13 @@ def averageStopLocation(stop1, stop2):
     loc0 = (float(stop1.loc[0]) + float(stop2.loc[0]))/2
     loc1 = (float(stop1.loc[1]) + float(stop2.loc[1]))/2
     name = stop1.name + '+' + stop2.name
-    stopID = stop1.pokeID + '+' + stop2.pokeID
+    stopID = stop1.pokeID + '+ ' + stop2.pokeID
     newStop = PokeStop(stopID, name, (loc0,loc1))
     return newStop
 
 def mergeStops(pokeList):
     newL = pokeList[:]
     counter= 0
-    combinedL = []
     while(True):
         newL2 = []
         usedStops = []
@@ -474,15 +473,13 @@ def mergeStops(pokeList):
             stopUsed = False
             for stop2 in newL:
                 if stop1 != stop2:
-                    if getDistanceBetweenPokeStops(stop1, stop2) < 0.0006 and stop1 not in usedStops and stop2 not in usedStops and stop1 not in combinedL and stop2 not in combinedL:
+                    if getDistanceBetweenPokeStops(stop1, stop2) < 0.0004 and stop1 not in usedStops and stop2 not in usedStops:
                         newStop = averageStopLocation(stop1, stop2)
                         changesMade = True
                         stopUsed = True
                         newL2.append(newStop)
                         usedStops.append(stop1)
                         usedStops.append(stop2)
-                        combinedL.append(stop1)
-                        combinedL.append(stop2)
                         #print(stop1)
                         #print(stop2)
                         counter+=1
@@ -492,21 +489,28 @@ def mergeStops(pokeList):
         if not changesMade:
             return newL2
             break
-        #print(newL2)
         newL = newL2[:]
-        #print(counter)
     return newL
 
+def calcLowerBound(pokeList, distDict, excludeList = []):
+    totalD = 0
+    for stop in pokeList:
+        closestTwoStops = stop.closestNStops(2, pokeList)
+        totalD += getDistanceBetweenPokeStops( closestTwoStops[0], stop )
+    return totalD/2
 
+def branchAndBound(pokeList, distDict, excludeList = []):
+    print(calcLowerBound(pokeList, distDict, excludeList))
+    for stop in pokeList:
+        if stop.name == "Sombrero Duck":
+            for stop2 in pokeList:
+                if stop2 != stop:
+                    pass
+    return
 
 def main():
     KMLDict, pokeDict = getDict()
     pokeList = [PokeStop(elem, key, KMLDict[key]) for key in KMLDict.keys() for elem in pokeDict.keys() if pokeDict[elem] == KMLDict[key]]
-    spot =None
-    #for stop in pokeList:
-        #if stop.name == "Regionally Appropriate Landscape Demonstration Garden":
-           # spot = stop
-    
     
     #Mudd
     #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[1] > 34.10540 and pokestop.loc[0] > -117.71325)]
@@ -521,9 +525,9 @@ def main():
     #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[1] > 34.094 and pokestop.loc[1] < 34.10000 and pokestop.loc[0] > -117.715 and pokestop.loc[0] < -117.60727) \
      #or (pokestop.loc[1] > 34.09749 and pokestop.loc[1] < 34.10140 and pokestop.loc[0] < -117.7090 and pokestop.loc[0] > -117.7190) \
      #or (pokestop.loc[1] > 34.1030 and pokestop.loc[1] < 34.10240 and pokestop.loc[0] < -117.71 and pokestop.loc[0] > -117.7)]
-    pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[0] > -117.71500 and pokestop.loc[0] < -117.70700 and pokestop.loc[1] < 34.09983) \
-                or (pokestop.loc[0] > -117.71640 and pokestop.loc[0] < -117.7096 and pokestop.loc[1] > 34.0977 and pokestop.loc[1] < 34.10137) \
-                or (pokestop.loc[0] > -117.71355 and pokestop.loc[0] < -117.7116 and pokestop.loc[1] > 34.10136 and pokestop.loc[1] < 34.10248)]
+    #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[0] > -117.71500 and pokestop.loc[0] < -117.70700 and pokestop.loc[1] < 34.09983) \
+                #or (pokestop.loc[0] > -117.71640 and pokestop.loc[0] < -117.7096 and pokestop.loc[1] > 34.0977 and pokestop.loc[1] < 34.10137) \
+                #or (pokestop.loc[0] > -117.71355 and pokestop.loc[0] < -117.7116 and pokestop.loc[1] > 34.10136 and pokestop.loc[1] < 34.10248)]
 
     #Village
     #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.09695 and pokestop.loc[0] < -117.71552)]
@@ -533,19 +537,24 @@ def main():
     #(pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71405 and pokeStop.loc[0] < -117.70696)]
     
     #pokeList.remove(spot)
-    pokeList = mergeStops(pokeList)
+    print(len(pokeList))
+    #pokeList = mergeStops(pokeList)
 
     print(len(pokeList))
-    for poke in pokeList:
-        print(poke)
+    # for poke in pokeList:
+    #     print(poke)
+
     global distDict
     distDict, refDict = getDistanceDictionary(pokeList)
+
+    #print(calcLowerBound(pokeList, distDict))
+    path = branchAndBound(pokeList, distDict)
     #path = bruteForce(pokeList, 15)
-    listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
-    path = minDist.travelling_salesman(listOfCoors)
-    path = getNamedPath(path, pokeList)
-    print(path)
-    kmlPokeDict.writeKMLFile('OptimalPomonaPath.kml', path)
+    #listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
+    #path = minDist.travelling_salesman(listOfCoors)
+    #path = getNamedPath(path, pokeList)
+    #print(path)
+    #kmlPokeDict.writeKMLFile('OptimalPomonaPath.kml', path)
     
     #cluster( pokeList )
 
