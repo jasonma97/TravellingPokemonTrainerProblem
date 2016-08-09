@@ -2,6 +2,7 @@ import kmlPokeDict
 import minDist
 import itertools
 import geneticAlgorithmTSP
+from random import sample
 
 FILENAME = 'pokestopdata2.txt'
 
@@ -174,13 +175,67 @@ def calcLowerBound(pokeList):
             totalD += getDistanceBetweenPokeStops( closeStop, stop )
     return totalD/2
 
-def branchAndBound(pokeList):
+def involvedInList( edgeL, stop ):
+    if lst == None:
+        return False
+    else:
+        for edge in edgeL:
+            if edge[0] == stop or edge[1] == stop:
+                return True
+        return False
+
+def calcLowerBoundWithDefaultEdges(pokeList, usedEdges = [], excludedEdges = [] ):
+    totalD = 0
+    for stop in pokeList:
+        n = 2
+        added = 0
+        while(True):
+            closestTwoStops = stop.closestNStops( n, pokeList)
+            for closeStop in closestTwoStops:
+                if involvedInList(usedEdges, stop):
+                    n += 1
+                    continue
+                if involvedInList(excludeList, stop):
+                    n +=1
+                    continue
+                totalD += getDistanceBetweenPokeStops( closeStop, stop )
+                added += 1
+                if added == 2:
+                    break
+    return totalD/2
+
+def getAllEdges(pokeList):
+    return [[stop1, stop2] for stop1 in pokeList for stop2 in pokeList if stop1 != stop2]
+
+def branchAndBound(pokeList, edgeL, pokestopUsedCounter, analyzedL = [], useL = []):
+    if len(usedL) == len(pokeList):
+        return usedL
     print(calcLowerBound(pokeList))
     lowBound = calcLowerBound(pokeList)
-
     usedL = [0 for stop in pokeList]
-    print(len(usedL))
+    while(True):
+        chosenEdge = sample(edgeL, 1)
+        if chosenEdge not in analyzedL:
+            break
+    withEdge = usedL[:]
+    withEdge.append(chosenEdge)
+    newLowBound = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [])
+    otherNewLowBound = calcLowerBoundWithDefaultEdges(pokeList, useL, chosenEdge)
     return
+
+def main():
+    KMLDict, pokeDict = getDict()
+    pokeList = [PokeStop(elem, key, KMLDict[key]) for key in KMLDict.keys() for elem in pokeDict.keys() if pokeDict[elem] == KMLDict[key]]
+    #pokeList = filterList("Mudd", pokeList)
+
+    #print(len(pokeList))
+    #pokeList = mergeStops(pokeList)
+    pokestopUsedCounter = {}
+    for stop in pokeList:
+        pokestopUsedCounter[stop] = 0
+    path = branchAndBound(pokeList, getAllEdges(pokeList), pokestopUsedCounter)
+    print(getPathLength(pokeList))
+
 
 def filterList( schoolName, pokeList):
     if schoolName == 'Mudd':
@@ -200,17 +255,6 @@ def filterList( schoolName, pokeList):
         return [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.09695 and pokestop.loc[0] < -117.71552)]
     else:
         return []
-
-
-def main():
-    KMLDict, pokeDict = getDict()
-    pokeList = [PokeStop(elem, key, KMLDict[key]) for key in KMLDict.keys() for elem in pokeDict.keys() if pokeDict[elem] == KMLDict[key]]
-    #pokeList = filterList("Mudd", pokeList)
-
-    #print(len(pokeList))
-    #pokeList = mergeStops(pokeList)
-    path = branchAndBound(pokeList)
-    print(getPathLength(pokeList))
 
 if __name__ == '__main__':
     main()
