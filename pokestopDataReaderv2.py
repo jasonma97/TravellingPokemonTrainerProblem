@@ -7,7 +7,7 @@ import itertools
 import geneticAlgorithmTSP
 
 FILENAME = 'pokestopdata2.txt'
-MAXPOKESTOPS = 15
+MAXPOKESTOPS = 12
 #A path length of 1 is staying put
 #I'm not counting paths of length 1
 MINPATHLENGTH = 4
@@ -492,21 +492,58 @@ def mergeStops(pokeList):
         newL = newL2[:]
     return newL
 
-def calcLowerBound(pokeList, distDict, excludeList = []):
+def calcLowerBound(pokeList, distDict, useList = [], excludeList = []):
     totalD = 0
     for stop in pokeList:
-        closestTwoStops = stop.closestNStops(2, pokeList)
-        totalD += getDistanceBetweenPokeStops( closestTwoStops[0], stop )
+        f = lambda x: x[0] == stop.name or x[1] == stop.name
+        if useList == []:
+            n = 2
+        else:
+            n = 2 - int(max(map(f, useList)))
+        closestTwoStops = stop.closestNStops( n, pokeList)
+        for closeStop in closestTwoStops:
+            if closeStop not in excludeList:
+                totalD += getDistanceBetweenPokeStops( closeStop, stop )
+    for stop in useList:
+        totalD += distDict[stop] * 2
     return totalD/2
 
 def branchAndBound(pokeList, distDict, excludeList = []):
-    print(calcLowerBound(pokeList, distDict, excludeList))
-    for stop in pokeList:
-        if stop.name == "Sombrero Duck":
-            for stop2 in pokeList:
-                if stop2 != stop:
-                    pass
+    print(calcLowerBound(pokeList, distDict, excludeList) * 112)
+    lowBound = calcLowerBound(pokeList, distDict, excludeList)
+    for edge, value in distDict.items(): 
+        currLowerBound = calcLowerBound(pokeList, distDict, [edge], excludeList)
+
+        if currLowerBound < lowBound:
+            print(currLowerBound)
+            print(edge)
+            print("Yay")
+        elif currLowerBound > lowBound:
+            #print("Nope")
+            pass
+        else:
+            pass
+            #print("Meh")
     return
+
+def filterList( schoolName, pokeList):
+    if schoolName == 'Mudd':
+        return [pokestop for pokestop in pokeList if (pokestop.loc[1] > 34.10540 and pokestop.loc[0] > -117.71325)]
+    elif schoolName == 'Scripps':
+        return [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.10540 and pokestop.loc[0] < -117.70830 and pokestop.loc[1] > 34.10260 and pokestop.loc[0] > -117.71150)]
+    elif schoolName == "Pitzer":
+        return [pokestop for pokestop in pokeList if (pokestop.loc[1] > 34.1025 and pokestop.loc[1] < 34.10518 and pokestop.loc[0] > -117.70730 and pokestop.loc[0] < -117.7040)]
+    elif schoolName == "Pomona":
+        return [pokestop for pokestop in pokeList if (pokestop.loc[0] > -117.71500 and pokestop.loc[0] < -117.70700 and pokestop.loc[1] < 34.09983) \
+                or (pokestop.loc[0] > -117.71640 and pokestop.loc[0] < -117.7096 and pokestop.loc[1] > 34.0977 and pokestop.loc[1] < 34.10137) \
+                or (pokestop.loc[0] > -117.71355 and pokestop.loc[0] < -117.7116 and pokestop.loc[1] > 34.10136 and pokestop.loc[1] < 34.10248)]
+    elif schoolName == "CMC":
+        return [pokeStop for pokeStop in pokeList if (pokeStop.loc[1] < 34.10257 and pokeStop.loc[1] > 34.09964 and pokeStop.loc[0] < -117.70712 and pokeStop.loc[0] > -117.70929) or \
+            (pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71305 and pokeStop.loc[0] < -117.70696)]
+    elif schoolName == "Village":
+        return [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.09695 and pokestop.loc[0] < -117.71552)]
+    else:
+        return []
 
 def main():
     KMLDict, pokeDict = getDict()
@@ -533,12 +570,12 @@ def main():
     #pokeList = [pokestop for pokestop in pokeList if (pokestop.loc[1] < 34.09695 and pokestop.loc[0] < -117.71552)]
 
     #CMC
-    pokeList = [pokeStop for pokeStop in pokeList if (pokeStop.loc[1] < 34.10257 and pokeStop.loc[1] > 34.09964 and pokeStop.loc[0] < -117.70712 and pokeStop.loc[0] > -117.70929) or \
-    (pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71305 and pokeStop.loc[0] < -117.70696)]
+    #pokeList = [pokeStop for pokeStop in pokeList if (pokeStop.loc[1] < 34.10257 and pokeStop.loc[1] > 34.09964 and pokeStop.loc[0] < -117.70712 and pokeStop.loc[0] > -117.70929) or \
+    #(pokeStop.loc[1] > 34.10138 and pokeStop.loc[1] < 34.10266 and pokeStop.loc[0] > -117.71305 and pokeStop.loc[0] < -117.70696)]
     
     #pokeList.remove(spot)
     print(len(pokeList))
-    pokeList = mergeStops(pokeList)
+    #pokeList = mergeStops(pokeList)
 
     print(len(pokeList))
     # for poke in pokeList:
@@ -550,11 +587,12 @@ def main():
     #print(calcLowerBound(pokeList, distDict))
     #path = branchAndBound(pokeList, distDict)
     #path = bruteForce(pokeList, 15)
-    listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
-    path = minDist.travelling_salesman(listOfCoors)
-    path = getNamedPath(path, pokeList)
-    print(path)
-    kmlPokeDict.writeKMLFile('OptimalMuddPath.kml', path)
+
+    # listOfCoors = [[stop.loc[0],stop.loc[1]] for stop in pokeList]
+    # path = minDist.travelling_salesman(listOfCoors)
+    # path = getNamedPath(path, pokeList)
+    # print(path)
+    # kmlPokeDict.writeKMLFile('OptimalMuddPath.kml', path)
     
     #cluster( pokeList )
 
@@ -576,16 +614,16 @@ def main():
     #         print(getPathLength(a0))
     #         print(len(a0))
     #         break
-    #print(greedyL[0])
-    # bestTrainer = geneticAlgorithm(pokeList)
-    # bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
-    # gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
+    # print(greedyL[0])
+    bestTrainer = geneticAlgorithm(pokeList)
+    bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
+    gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
 
-    # for a0 in range(100):
-    #     gen.evolveGen()
+    for a0 in range(100):
+        gen.evolveGen()
 
-    # bestTrainerL = sorted(gen.trainerL, key = lambda trainer: trainer.fitness)
-    # bestTrainer = bestTrainerL[-1]
+    bestTrainerL = sorted(gen.trainerL, key = lambda trainer: trainer.fitness)
+    bestTrainer = bestTrainerL[-1]
 
     # for trainer in bestTrainerL:
     #     print(trainer)
