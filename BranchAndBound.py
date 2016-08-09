@@ -184,13 +184,28 @@ def involvedInList( edgeL, stop ):
                 return True
         return False
 
+def inEdges( edgeL, stop ):
+    counter = 0
+    for edge in edgeL:
+        if stop == edge[0]:
+            print("hello")
+            counter += 1
+        if stop == edge[1]:
+            print("world")
+            counter += 1
+    return counter
+
 def calcLowerBoundWithDefaultEdges(pokeList, usedEdges = [], excludedEdges = [] ):
     totalD = 0
+    n = 2
     for stop in pokeList:
+        n = 2 - inEdges(usedEdges, stop)
         closestTwoStops = stop.closestNStops( n, pokeList, usedEdges + excludedEdges)
         for closeStop in closestTwoStops:
             totalD += getDistanceBetweenPokeStops( closeStop, stop )
+    #print(usedEdges)
     for edge in usedEdges:
+        print(edge)
         totalD += 2 * getDistanceBetweenPokeStops( edge[0], edge[1])
     return totalD/2
 
@@ -198,20 +213,30 @@ def getAllEdges(pokeList):
     return [[stop1, stop2] for stop1 in pokeList for stop2 in pokeList if stop1 != stop2]
 
 def branchAndBound(pokeList, edgeL, pokestopUsedCounter, analyzedL = [], useL = []):
-    if len(usedL) == len(pokeList):
-        return usedL
+    #print(edgeL)
+    if len(useL) == len(pokeList):
+        return useL
     print(calcLowerBound(pokeList))
     lowBound = calcLowerBound(pokeList)
-    usedL = [0 for stop in pokeList]
+    #useL = [0 for stop in pokeList]
     while(True):
-        chosenEdge = sample(edgeL, 1)
+        chosenEdge = sample(edgeL, 1)[0]
         if chosenEdge not in analyzedL:
             break
-    withEdge = usedL[:]
+    withEdge = useL[:]
+    #print(chosenEdge)
     withEdge.append(chosenEdge)
-    newLowBound = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [])
-    otherNewLowBound = calcLowerBoundWithDefaultEdges(pokeList, useL, chosenEdge)
-    return
+    lowBoundWithEdge = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [edge for edge in analyzedL if edge not in useL])
+    lowBoundWithoutEdge = calcLowerBoundWithDefaultEdges(pokeList, useL, chosenEdge)
+    print(lowBoundWithEdge)
+    print(lowBoundWithoutEdge)
+    if lowBoundWithEdge > lowBoundWithoutEdge:
+        pass
+    elif lowBoundWithEdge < lowBoundWithoutEdge:
+        pass
+    else:
+        pass
+    return 
 
 def main():
     KMLDict, pokeDict = getDict()
@@ -224,7 +249,7 @@ def main():
     for stop in pokeList:
         pokestopUsedCounter[stop] = 0
     path = branchAndBound(pokeList, getAllEdges(pokeList), pokestopUsedCounter)
-    print(getPathLength(pokeList))
+    #print(getPathLength(pokeList))
 
 
 def filterList( schoolName, pokeList):
