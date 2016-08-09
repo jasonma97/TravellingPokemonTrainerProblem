@@ -187,21 +187,11 @@ def involvedInList( edgeL, stop ):
 def calcLowerBoundWithDefaultEdges(pokeList, usedEdges = [], excludedEdges = [] ):
     totalD = 0
     for stop in pokeList:
-        n = 2
-        added = 0
-        while(True):
-            closestTwoStops = stop.closestNStops( n, pokeList)
-            for closeStop in closestTwoStops:
-                if involvedInList(usedEdges, stop):
-                    n += 1
-                    continue
-                if involvedInList(excludeList, stop):
-                    n +=1
-                    continue
-                totalD += getDistanceBetweenPokeStops( closeStop, stop )
-                added += 1
-                if added == 2:
-                    break
+        closestTwoStops = stop.closestNStops( n, pokeList, usedEdges + excludedEdges)
+        for closeStop in closestTwoStops:
+            totalD += getDistanceBetweenPokeStops( closeStop, stop )
+    for edge in usedEdges:
+        totalD += 2 * getDistanceBetweenPokeStops( edge[0], edge[1])
     return totalD/2
 
 def getAllEdges(pokeList):
