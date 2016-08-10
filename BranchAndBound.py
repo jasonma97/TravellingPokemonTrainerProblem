@@ -2,10 +2,13 @@ import kmlPokeDict
 import minDist
 import itertools
 import geneticAlgorithmTSP
-from random import sample
+from random import sample, randint
+import sys
 
 FILENAME = 'pokestopdata2.txt'
 
+MAX_VISITS = [0,1,2]
+MERGE_DISTANCE = 400 / 112000
 class PokeStop:
     def __init__(self, pokeID, name, loc):
         self.name = name
@@ -13,7 +16,7 @@ class PokeStop:
         self.loc = loc[0:2]
 
     def __repr__(self):
-        return   self.name + ':' +  str(self.loc)
+        return   self.name 
 
     def closestNStops( self, N, pokeList, excludeList = []):
         closestStops = []
@@ -114,28 +117,11 @@ def getDict():
 def getDistanceBetweenPokeStops(startPoint, endPoint):
     return ((startPoint.loc[0] - endPoint.loc[0])**2 + (startPoint.loc[1] - endPoint.loc[1])**2)**0.5 
 
-def getDistanceDictionary(pokeList):
-    listOfCoors = [(stop.loc[0], stop.loc[1], stop.name) for stop in pokeList]
-    distDict = {}
-    refDict= {}
-    for i in range(len(listOfCoors)):
-        for j in range(len(listOfCoors)):
-            if i != j:
-                distDict[(listOfCoors[i][2], listOfCoors[j][2])] = distanceBetweenPoints(listOfCoors[i], listOfCoors[j])
-                distDict[(listOfCoors[j][2], listOfCoors[i][2])] = distanceBetweenPoints(listOfCoors[i], listOfCoors[j])
-                refDict[i] = listOfCoors[i][2]
-                refDict[j] = listOfCoors[j][2]
-            else:
-                distDict[(listOfCoors[i][2],listOfCoors[j][2])] = 100000
-    return distDict, refDict
-
 def getPathLength(pathList):
     totalDistance = 0
     for stopNumber in range(len(pathList) - 1):
         totalDistance+= getDistanceBetweenPokeStops( pathList[stopNumber], pathList[stopNumber + 1])
     return totalDistance
-
-
 
 def mergeStops(pokeList):
     newL = pokeList[:]
@@ -167,6 +153,17 @@ def mergeStops(pokeList):
         newL = newL2[:]
     return newL
 
+def inEdges( edgeL, stop ):
+    counter = 0
+    for edge in edgeL:
+        if stop == edge[0]:
+            #print("hello")
+            counter += 1
+        if stop == edge[1]:
+            #print("world")
+            counter += 1
+    return counter
+
 def calcLowerBound(pokeList):
     totalD = 0
     for stop in pokeList:
@@ -175,80 +172,204 @@ def calcLowerBound(pokeList):
             totalD += getDistanceBetweenPokeStops( closeStop, stop )
     return totalD/2
 
-def involvedInList( edgeL, stop ):
-    if lst == None:
-        return False
-    else:
-        for edge in edgeL:
-            if edge[0] == stop or edge[1] == stop:
-                return True
-        return False
-
-def inEdges( edgeL, stop ):
-    counter = 0
-    for edge in edgeL:
-        if stop == edge[0]:
-            print("hello")
-            counter += 1
-        if stop == edge[1]:
-            print("world")
-            counter += 1
-    return counter
-
 def calcLowerBoundWithDefaultEdges(pokeList, usedEdges = [], excludedEdges = [] ):
     totalD = 0
     n = 2
+    #counter = 0 
     for stop in pokeList:
         n = 2 - inEdges(usedEdges, stop)
+        if n < 0:
+            n = 0
         closestTwoStops = stop.closestNStops( n, pokeList, usedEdges + excludedEdges)
         for closeStop in closestTwoStops:
+            #counter += 1
             totalD += getDistanceBetweenPokeStops( closeStop, stop )
     #print(usedEdges)
+    #print(counter)
     for edge in usedEdges:
-        print(edge)
+        #print(edge)
         totalD += 2 * getDistanceBetweenPokeStops( edge[0], edge[1])
     return totalD/2
 
 def getAllEdges(pokeList):
     return [[stop1, stop2] for stop1 in pokeList for stop2 in pokeList if stop1 != stop2]
 
-def branchAndBound(pokeList, edgeL, pokestopUsedCounter, analyzedL = [], useL = []):
-    #print(edgeL)
-    if len(useL) == len(pokeList):
-        return useL
-    print(calcLowerBound(pokeList))
+
+def filterEdgeL(pokeList, edgeL, inPathL, viewL):
+    pokestopCounter = {}
+    availableEdgeL = []
+    edgesLeft = {}
+    for stop in pokeList:
+        pokestopCounter[stop] = 0
+    for edge in inPathL:
+        pokestopCounter[edge[0]] += 1
+        pokestopCounter[edge[1]] += 1
+    for edge in edgeL:
+        #Note MAX_VISITS = [0,1,2]. This tests to see if the number of times each node has been visited is less than 2, but greater than 0
+        if pokestopCounter[edge[0]] in MAX_VISITS and pokestopCounter[edge[1]] in MAX_VISITS and edge not in viewL:
+            availableEdgeL.append(edge)
+    return availableEdgeL
+
+def getNeighborStops( edgeL, stop ):
+    neighborL = []
+    for edge in edgeL:
+        if edge[0] == stop and edge[1] not in neighborL:
+            neighborL.append(edge[1])
+        if edge[1] == stop and edge[0] not in neighborL:
+            neighborL.append(edge[0])
+    return neighborL
+
+def branchAndBound(pokeList, edgeL, analyzedL = [], useL = [], minimumDist = None):
     lowBound = calcLowerBound(pokeList)
     #useL = [0 for stop in pokeList]
-    while(True):
-        chosenEdge = sample(edgeL, 1)[0]
-        if chosenEdge not in analyzedL:
-            break
-    withEdge = useL[:]
-    #print(chosenEdge)
-    withEdge.append(chosenEdge)
-    lowBoundWithEdge = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [edge for edge in analyzedL if edge not in useL])
-    lowBoundWithoutEdge = calcLowerBoundWithDefaultEdges(pokeList, useL, chosenEdge)
-    print(lowBoundWithEdge)
-    print(lowBoundWithoutEdge)
-    if lowBoundWithEdge > lowBoundWithoutEdge:
-        pass
-    elif lowBoundWithEdge < lowBoundWithoutEdge:
-        pass
+    chosenEdge = sample(edgeL, 1)[0]
+    #print(lowBound)
+    lowerBoundWithEdge = calcLowerBoundWithDefaultEdges(pokeList, [chosenEdge], [])
+    lowerBoundWithoutEdge = calcLowerBoundWithDefaultEdges(pokeList, [], [chosenEdge])
+
+    #print(lowerBoundWithEdge)
+    #print(lowerBoundWithoutEdge)
+
+    if lowerBoundWithEdge <= lowerBoundWithoutEdge:
+        #print("Used withEdge")
+        WEdgeL = branchAndBoundHelper(pokeList, edgeL, None, [chosenEdge], [chosenEdge])
+        WOEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(generatePath(WEdgeL)), [chosenEdge], [])
     else:
-        pass
-    return 
+        #print("Use withoutEdge")
+        WOEdgeL = branchAndBoundHelper(pokeList, edgeL, None, [chosenEdge], [])
+        WEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(generatePath(WOEdgeL)), [chosenEdge], [chosenEdge])
+    WOPath = generatePath(WOEdgeL)
+    WPath = generatePath(WEdgeL)
+    if getPathLength(WPath) <= getPathLength(WOPath):
+        return WPath
+    else:
+        return WOPath
+
+def branchAndBoundHelper(pokeList, edgeL, minimumDist = None, viewedL = [], inPathL = [], depth = []):
+    #print(inPathL)
+    depth += [1]
+    if len(inPathL) == len(pokeList):
+        return inPathL
+    #print(len(depth))
+    #print("Path:")
+    #print(inPathL)
+    availableEdgeL = filterEdgeL(pokeList, edgeL, inPathL, viewedL)
+    #print("Available Edges:" + str(len(availableEdgeL)))
+    #print(availableEdgeL)
+    
+    if availableEdgeL == []:
+        #print(inPathL)
+        #print(viewedL)
+        return inPathL
+    chosenEdge = sample(availableEdgeL, 1)[0]
+    withOutEdge = inPathL[:]
+    withEdge = inPathL[:]
+    withEdge.append(chosenEdge)
+    viewedL.append(chosenEdge)
+    #print(withEdge)
+    #print(withoutEdgeL)
+    lowerBoundWithEdge = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [edge for edge in viewedL if edge not in withEdge])
+    lowerBoundWithoutEdge = calcLowerBoundWithDefaultEdges(pokeList, withOutEdge, [edge for edge in viewedL if edge not in withOutEdge])
+    if minimumDist != None and lowerBoundWithoutEdge > minimumDist:
+        lowerBoundWithoutEdge = lowerBoundWithEdge
+    if lowerBoundWithEdge <= lowerBoundWithoutEdge:
+        withEdgeL = branchAndBoundHelper(pokeList, edgeL, minimumDist, viewedL, withEdge)
+        pathWithEdge = generatePath(withEdgeL)
+        if minimumDist == None:
+            withoutEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(pathWithEdge), viewedL, withOutEdge)
+            #print(withoutEdgeL)
+            pathWithoutEdge = generatePath(withoutEdgeL)
+        elif minimumDist > getPathLength(pathWithEdge):
+            withoutEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(pathWithEdge), viewedL, withOutEdge)
+            #rint(withoutEdgeL)
+            pathWithoutEdge = generatePath(withoutEdgeL)
+        else:
+            withoutEdgeL = branchAndBoundHelper(pokeList, edgeL, minimumDist, viewedL, withOutEdge)
+            #print(withoutEdgeL)
+            pathWithoutEdge = generatePath(withoutEdgeL)
+    else:
+        withoutEdgeL = branchAndBoundHelper(pokeList, edgeL, minimumDist, viewedL, withOutEdge)
+        #print("Without")
+        #print(withoutEdgeL)
+        pathWithoutEdge = generatePath(withoutEdgeL)
+        if minimumDist == None:
+            #print(pathWithoutEdge)
+            withEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(pathWithoutEdge), viewedL, withEdge)
+            pathWithEdge = generatePath(withEdgeL)
+        elif minimumDist > getPathLength(pathWithoutEdge):
+            withEdgeL = branchAndBoundHelper(pokeList, edgeL, getPathLength(pathWithoutEdge), viewedL, withEdge)
+            pathWithEdge = generatePath(withEdgeL)
+        else:
+            withEdgeL = branchAndBoundHelper(pokeList, edgeL, minimumDist, viewedL, withEdge)
+            pathWithEdge = generatePath(withEdgeL)
+
+    #print(withEdgeL)
+    #print(withoutEdgeL)
+    if getPathLength(pathWithEdge) < getPathLength(pathWithoutEdge):
+        return withEdgeL
+    elif getPathLength(pathWithEdge) > getPathLength(pathWithoutEdge):
+        return withoutEdgeL
+    else:
+        return withEdgeL
+    
+
+
+
+def generatePath(edgeL):
+    #print(edgeL)
+    ########################################################################################################################
+    #This is for path construction after everything is finished running
+    ########################################################################################################################
+    #print("EdgeL: ")
+    #print(edgeL)
+    if edgeL == []:
+        return []
+    path = [edgeL[0][0]]
+    edgeUsed = []
+    while(True):
+        changesMade = False
+        for edge in edgeL:
+            if edge[0] == path[-1] and edge[1] not in path and edge not in edgeUsed:
+                path.append(edge[1])
+                changesMade = True
+                edgeUsed.append(edge)
+            elif edge[1] == path[-1] and edge[0] not in path and edge not in edgeUsed:
+                path.append(edge[0])
+                changesMade = True
+                edgeUsed.append(edge)
+            elif edge[0] == path[0] and edge[1] not in path and edge not in edgeUsed:
+                path = [edge[1]] + path
+                changesMade = True
+                edgeUsed.append(edge)
+            elif edge[1]  == path[0] and edge[0] not in path and edge not in edgeUsed:
+                path = [edge[0]] + path
+                changesMade = True
+                edgeUsed.append(edge)
+        if not changesMade:
+            break
+    #print(path)
+    #print(withEdge)
+    
+    #print("Path: ")
+    #print(path)
+    return path
+
+
 
 def main():
+    sys.setrecursionlimit(10000)
     KMLDict, pokeDict = getDict()
     pokeList = [PokeStop(elem, key, KMLDict[key]) for key in KMLDict.keys() for elem in pokeDict.keys() if pokeDict[elem] == KMLDict[key]]
     #pokeList = filterList("Mudd", pokeList)
 
     #print(len(pokeList))
     #pokeList = mergeStops(pokeList)
-    pokestopUsedCounter = {}
-    for stop in pokeList:
-        pokestopUsedCounter[stop] = 0
-    path = branchAndBound(pokeList, getAllEdges(pokeList), pokestopUsedCounter)
+    pokeList = []
+    for a0 in range(4):
+        pokeList.append(PokeStop(str(a0) * 3, str(a0), [randint(0,10), randint(0,10)]))
+    #print(pokeList)
+    path = branchAndBound(pokeList, getAllEdges(pokeList))
+    print(generatePath(path))
     #print(getPathLength(pokeList))
 
 

@@ -7,7 +7,7 @@ import itertools
 import geneticAlgorithmTSP
 
 FILENAME = 'pokestopdata2.txt'
-MAXPOKESTOPS = 12
+MAXPOKESTOPS = 15
 #A path length of 1 is staying put
 #I'm not counting paths of length 1
 MINPATHLENGTH = 4
@@ -615,15 +615,15 @@ def main():
     #         print(len(a0))
     #         break
     # print(greedyL[0])
-    bestTrainer = geneticAlgorithm(pokeList)
-    bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
-    gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
+    # bestTrainer = geneticAlgorithm(pokeList)
+    # bestTrainerL = [geneticAlgorithm(pokeList) for a0 in range(100)]
+    # gen = Generation(100, 0.50, bestTrainerL, 5, 0, pokeList, distDict)
 
-    for a0 in range(100):
-        gen.evolveGen()
+    # for a0 in range(100):
+    #     gen.evolveGen()
 
-    bestTrainerL = sorted(gen.trainerL, key = lambda trainer: trainer.fitness)
-    bestTrainer = bestTrainerL[-1]
+    # bestTrainerL = sorted(gen.trainerL, key = lambda trainer: trainer.fitness)
+    # bestTrainer = bestTrainerL[-1]
 
     # for trainer in bestTrainerL:
     #     print(trainer)
