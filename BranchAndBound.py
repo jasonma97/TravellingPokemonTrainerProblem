@@ -208,7 +208,7 @@ def filterEdgeL(pokeList, edgeL, inPathL, viewL):
         pokestopCounter[edge[1]] += 1
     for edge in edgeL:
         #Note MAX_VISITS = [0,1,2]. This tests to see if the number of times each node has been visited is less than 2, but greater than 0
-        if pokestopCounter[edge[0]] in MAX_VISITS and pokestopCounter[edge[1]] in MAX_VISITS and edge not in viewL:
+        if (pokestopCounter[edge[0]] in MAX_VISITS or pokestopCounter[edge[1]] in MAX_VISITS) and edge not in viewL:
             availableEdgeL.append(edge)
     return availableEdgeL
 
@@ -252,7 +252,7 @@ def branchAndBoundHelper(pokeList, edgeL, minimumDist = None, viewedL = [], inPa
     depth += [1]
     if len(inPathL) == len(pokeList):
         return inPathL
-    #print(len(depth))
+    print(len(depth))
     #print("Path:")
     #print(inPathL)
     availableEdgeL = filterEdgeL(pokeList, edgeL, inPathL, viewedL)
