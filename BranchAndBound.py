@@ -199,6 +199,8 @@ def filterEdgeL(pokeList, edgeL, inPathL, viewL):
     pokestopCounter = {}
     availableEdgeL = []
     edgesLeft = {}
+    leftOverEdges = [edge for edge in edgeL if edge not in inPathL]
+
     for stop in pokeList:
         pokestopCounter[stop] = 0
     for edge in inPathL:
@@ -241,9 +243,9 @@ def branchAndBound(pokeList, edgeL, analyzedL = [], useL = [], minimumDist = Non
     WOPath = generatePath(WOEdgeL)
     WPath = generatePath(WEdgeL)
     if getPathLength(WPath) <= getPathLength(WOPath):
-        return WPath
+        return WPath, WOPath
     else:
-        return WOPath
+        return WOPath, WPath
 
 def branchAndBoundHelper(pokeList, edgeL, minimumDist = None, viewedL = [], inPathL = [], depth = []):
     #print(inPathL)
@@ -260,12 +262,15 @@ def branchAndBoundHelper(pokeList, edgeL, minimumDist = None, viewedL = [], inPa
     if availableEdgeL == []:
         #print(inPathL)
         #print(viewedL)
-        return inPathL
+        if inPathL == []:
+            return viewedL
+        return inPathL 
     chosenEdge = sample(availableEdgeL, 1)[0]
     withOutEdge = inPathL[:]
     withEdge = inPathL[:]
     withEdge.append(chosenEdge)
     viewedL.append(chosenEdge)
+    hasLeftOver = False
     #print(withEdge)
     #print(withoutEdgeL)
     lowerBoundWithEdge = calcLowerBoundWithDefaultEdges(pokeList, withEdge, [edge for edge in viewedL if edge not in withEdge])
@@ -305,6 +310,14 @@ def branchAndBoundHelper(pokeList, edgeL, minimumDist = None, viewedL = [], inPa
 
     #print(withEdgeL)
     #print(withoutEdgeL)
+    if pathWithEdge == []:
+        if pathWithoutEdge == []:
+            return viewedL
+        return printWithoutEdge
+    elif pathWithoutEdge == []:
+        if pathWithEdge == []:
+            return viewedL
+        return pathWithEdge
     if getPathLength(pathWithEdge) < getPathLength(pathWithoutEdge):
         return withEdgeL
     elif getPathLength(pathWithEdge) > getPathLength(pathWithoutEdge):
@@ -365,11 +378,11 @@ def main():
     #print(len(pokeList))
     #pokeList = mergeStops(pokeList)
     pokeList = []
-    for a0 in range(4):
+    for a0 in range(10):
         pokeList.append(PokeStop(str(a0) * 3, str(a0), [randint(0,10), randint(0,10)]))
     #print(pokeList)
     path = branchAndBound(pokeList, getAllEdges(pokeList))
-    print(generatePath(path))
+    print(path)
     #print(getPathLength(pokeList))
 
 
